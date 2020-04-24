@@ -130,6 +130,13 @@ a:hover{
 }
 
 
+.explode{
+		display: none;
+}
+
+.explodeshow{
+		display: block;
+}
 
 /*Scene 1*/
 
@@ -313,6 +320,98 @@ a:hover{
 /* End Scene 3*/
 
 
+body{
+	background-color: black;
+}
+
+
+
+.bBack{
+	animation-name: back;
+	animation-duration: 1.7s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transform-origin: 35% 45%;
+	animation-delay: .35s;
+}
+
+@keyframes back{
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+
+
+.boom{
+	animation-name: onetozero;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transform-origin: 35% 45%;  
+	animation-delay: .35s;
+}
+
+@keyframes onetozero{
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+
+@keyframes zerotoone{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+
+.smoke{
+	animation-name: smoke;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transform-origin: 50% 50%;
+}
+
+@keyframes smoke{
+	0%{opacity: 1;  transform: scale(1)}
+	100%{opacity: 0; transform: scale(1.5)}
+}
+
+.parachute{
+	animation-name: parachute;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+	transform-origin: 45% 50%;
+	animation-delay: .55s;
+}
+
+@keyframes parachute{
+	0%{transform: scale(0)}
+	100%{transform: scale(1)}
+}
+
+.bsmile{
+	animation-name: zerotoone;
+	animation-duration: .01s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+	transform-origin: 35% 45%;
+	animation-delay: 2.5s;
+}
+
+.bworry{
+	animation-name: onetozero;
+	animation-duration: .01s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transform-origin: 35% 45%;
+	animation-delay: 2.5s;
+}
+
+
 
 
 
@@ -337,9 +436,7 @@ body.body-state4 .rocket{
 }
 body.body-state5 .rocket{
 	background-image: url('../img/boom.gif');
-	width: 300px;
-	height: 298px;
-	margin-left: -150px;
+
 }
 
 
@@ -357,6 +454,9 @@ body.body-state4 .rocket{
 
 body.body-state5 .rocket{
 		transition: bottom 20000ms;
+			width: 400px;
+	height: 298px;
+	margin-left: -200px;
 }
 
 .state1,

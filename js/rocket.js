@@ -64,7 +64,9 @@ var changeState = function (state) {
 		document.getElementById('trusterC').className.baseVal = 'truster C';
 		document.getElementById('trusterB').className.baseVal = 'truster B';
 		document.getElementById('rightleg').className.baseVal = 'rightleg';
-		document.getElementById('leftleg').className.baseVal = 'leftleg';	
+		document.getElementById('leftleg').className.baseVal = 'leftleg';
+		document.getElementById('explode').className = 'explode';
+	
 
 	};
 
@@ -92,6 +94,8 @@ var changeState = function (state) {
 
     if (state == 5) {
 	document.getElementById('ufo').className = 'hide';
+	document.getElementById('explode').className = 'explodeshow';
+
 
 
 
