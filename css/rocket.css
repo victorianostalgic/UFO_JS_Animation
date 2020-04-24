@@ -1,0 +1,382 @@
+body{
+	font-family: 'Bungee',"Arial black", sans-serif;
+}
+
+
+h1{
+	color: #f5e44b;
+    font-size: 50px;
+}
+
+
+
+.left{
+	background-color: #1bb9b4 ;
+	position: fixed;
+	width: 40%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+a.button{
+	font-size: 35px;
+	display: inline-block;
+	background-color: #FB9A44;
+    color: #263054;
+    padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: color 300ms;
+
+}
+
+a:hover{
+	color: #f5e44b;
+}
+
+.countdown{
+
+		font-size: 90px;
+		margin-top: 40px;
+
+}
+
+.abort{
+    color: #FB9A44;
+    font-size: 25px;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #FB9A44;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+.right{
+	background-color: #263054;
+	position: fixed;
+	width: 60%;
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+
+.ground{
+	background: url('../img/ufo_ground.png') no-repeat center 0;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 162px;
+}
+
+.earth{
+	position: absolute;
+	bottom: 320px;
+	left: 50%;
+	background: url('../img/earth.png') no-repeat 0 0;
+	width: 250px;
+	height: 206px;
+	margin-left: -280px;
+	display: none;
+}
+.earth.show{
+	display: block;
+}
+
+.tacos{
+	position: absolute;
+	bottom: 280px;
+	left: 50%;
+	background: url('../img/tacos.png') no-repeat 0 0;
+	width: 240px;
+	height: 240px;
+	display: none;
+}
+.tacos.show{
+	display: block;
+}
+
+
+.rocket{
+	position: absolute;
+	left: 50%;
+	bottom: 61px;
+	width: 250px;
+	height: 270px;
+	margin-left: -125px;
+	background: url(none) no-repeat 0 0;
+	transition: bottom 10000ms;
+}
+
+/*New Ufo animation*/
+
+
+.startup{
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
+
+
+/*Scene 1*/
+
+.head {
+	animation-name: headtilt;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: 48% 29%;
+}
+
+.eye{
+	animation-name: eyeshift;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.worry{
+	display: none;
+}
+
+.worryon{
+	display: block;
+
+}
+
+
+.shock{
+	display: none;
+}
+
+.shockon{
+	display: block;
+}
+
+.smile{
+	display: block;
+}
+
+.smileoff{
+	display: none;
+}
+
+
+@keyframes eyeshift{
+0%{transform: translateX(0px) translateY(1px);}
+25%{transform: translateX(2px) translateY(1px);}
+50%{transform: translateX(0px) translateY(1px);}
+75%{transform: translateX(-1px) translateY(1px);}
+100%{transform: translateX(0px) translateY(1px);}
+}
+
+@keyframes headtilt {
+0%{transform: rotate(0deg);}
+25%{transform: rotate(13deg);}
+50%{transform: rotate(0deg);}
+75%{transform: rotate(-13deg);}
+100%{transform: rotate(0deg);}
+
+}
+
+
+
+.truster {
+	height: 100%;
+	animation-name: none;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+	transform-origin: 50% 69%;
+
+}
+
+
+
+/*End Scene 1*/
+
+
+
+/*Scene 2*/
+
+
+.trusterstart{
+  animation-name: start;
+}
+
+
+.B {
+  animation-delay: .35s;
+}
+
+.C {animation-delay: .66s;}
+
+
+
+
+@keyframes start {
+	0% {
+		transform: translateY(0px) scale(.5);
+		opacity:0;
+
+	}
+	1% {
+		transform: translateY(0px) scale(.3); 
+		opacity:1;
+	}
+	100% {
+		transform: translateY(64px)scale(1);
+
+	}
+}
+
+/*End Scene 2*/
+
+
+/*Scene 3*/
+
+.inmotiontruster{
+	animation-name: inmotion;
+}
+
+.leftleg{
+	animation-name: none;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transform-origin: 35% 45%;
+}
+
+.leftlegon{
+		animation-name: leftleg;
+}
+
+
+.rightleg{
+	animation-name: none;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transform-origin: 35% 45%;
+}
+
+.rightlegon{
+		animation-name: rightleg;	
+}
+
+
+@keyframes leftleg{
+100%{transform: rotate(-10deg) translateY(-95px) translateX(10px);}
+}
+
+@keyframes rightleg{
+100%{transform: rotate(10deg) translateY(-95px) translateX(-10px);}
+}
+
+
+@keyframes inmotion {
+	0% {
+		transform: translateY(0px) scale(.5);
+		opacity:0;
+
+	}
+	1% {
+		transform: translateY(0px) scale(.5); 
+		opacity:1;
+	}
+	50% {
+		transform: translateY(40px) scale(1);
+
+	}
+	100% {
+		transform: translateY(80px)scale(.5);
+
+	}
+}
+
+/* End Scene 3*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* rocket bg image */
+body.body-state2 .rocket{
+	background-image: url(none);
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url(none);
+}
+body.body-state5 .rocket{
+	background-image: url('../img/boom.gif');
+	width: 300px;
+	height: 298px;
+	margin-left: -150px;
+}
+
+
+
+body.body-state1 .rocket{
+	transition: none;
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	bottom: 1000px;
+
+}
+
+
+body.body-state5 .rocket{
+		transition: bottom 20000ms;
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5{
+	display: none;
+}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
+
+a{
+
+}
+
+a.button{
+
+}
